@@ -3,7 +3,11 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
-    <display-name>test-javaee</display-name>
+    <display-name>algorigthm-pk</display-name>
+    
+    <welcome-file-list>
+    <welcome-file>primKruskal.jsp</welcome-file>
+    </welcome-file-list>
 
 	<servlet>
 	    <servlet-name>algo-main</servlet-name>
@@ -11,16 +15,43 @@
 	</servlet>
 	<servlet-mapping>
 	    <servlet-name>algo-main</servlet-name>
-	    <url-pattern>/algo-pk2</url-pattern>
+	    <url-pattern>/algo-pk</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>algo-result</servlet-name>
+	    <jsp-file>/result.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>algo-result</servlet-name>
+	    <url-pattern>/result</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
 	    <servlet-name>GServlet</servlet-name>
-	    <servlet-class>org.jedi_bachelor.servlets.GServlet</servlet-class>
+	    <servlet-class>org.jedi_bachelor.algorithm.servlets.GServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 	    <servlet-name>GServlet</servlet-name>
-	    <url-pattern>/algo-pk3</url-pattern>
+	    <url-pattern>/algo-servletg</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>HServlet</servlet-name>
+	    <servlet-class>org.jedi_bachelor.algorithm.servlets.HelloWorldServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>HServlet</servlet-name>
+	    <url-pattern>/algo-servleth</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>FServlet</servlet-name>
+	    <servlet-class>org.jedi_bachelor.algorithm.servlets.ForwardServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>FServlet</servlet-name>
+	    <url-pattern>/algo-servletf</url-pattern>
 	</servlet-mapping>
 	
 	<error-page>

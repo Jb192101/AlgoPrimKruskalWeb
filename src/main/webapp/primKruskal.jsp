@@ -47,7 +47,7 @@
 </head>
 <body>
     <h1>Алгоритм Прима-Краскала</h1>
-    <form action="GServlet" method="post">
+    <form action="/algo-p-k/algo-servletg" method="post">
         <div>
             <label for="matrixSize">Размер матрицы (1-10):</label>
             <input type="number" id="matrixSize" name="matrixSize" min="1" max="10" value="3" 
@@ -64,12 +64,5 @@
     <script>
         window.onload = updateMatrix;
     </script>
-    
-    <h2>Результат:</h2>
-    <div id="result">
-        <% if (request.getAttribute("result") != null) { %>
-            <pre><%= request.getAttribute("result") %></pre>
-        <% } %>
-    </div>
 </body>
 </html>
